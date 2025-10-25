@@ -1,0 +1,108 @@
+table {
+  width: 100%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+th {
+  background: #4c9e69;
+  color: white;
+  position: relative;
+  user-select: none;
+  overflow: visible;
+}
+
+tr:nth-child(even) td {
+  background-color: #d3d3d341;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.sort-icon-span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  overflow: visible;
+}
+
+.sort-icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.7;
+  transition: transform 0.2s, opacity 0.2s;
+  vertical-align: middle;
+  transform-origin: center;
+}
+
+.sort-icon.asc {
+  transform: rotate(0deg);
+}
+
+.sort-icon.desc {
+  transform: rotate(180deg);
+}
+
+th:hover .sort-icon {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+#search {
+  width: 40%;
+  margin: 20px auto;
+  display: block;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#search:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
+  outline: none;
+}
+
+#loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  border-top-color: #333;
+  animation: spin 1s linear infinite;
+  margin: 50px auto;
+  display: none;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  color: red;
+  font-size: 25px;
+}
